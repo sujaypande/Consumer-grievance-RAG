@@ -1,0 +1,21 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+python-dotenv
+
+# LangChain RAG pipeline
+pypdf
+langchain
+langchain-community
+langchain-google-genai
+langchain-chroma
+chromadb
+# EnsembleRetriever, ContextualCompressionRetriever, CrossEncoderReranker --
+# moved out of the base `langchain` package into langchain_classic as of
+# LangChain 1.0. Only a transitive dep of langchain-community otherwise;
+# pinned explicitly since chain.py imports from it directly.
+langchain-classic
+
+# Hybrid search (BM25) + cross-encoder reranking
+rank_bm25
+sentence-transformers
